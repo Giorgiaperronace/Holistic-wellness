@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Holistic Wellness</h1>
+            <div class="profile">
+                <a href="#to do">Maria Rossi</a>
+                <img src="images/profilepic.png">
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <h2>How was your sleep?</h2>
+        </div>
+        
+        <section class="container">
+            
+            <div class="card">
+                <div class="section-title">How many hours did you sleep?</div>
+                <span id="sleepHoursValue">8</span>
+                <input type="range" min="0" max="24" value="8" oninput="updateValue('sleepHoursValue', this.value)">
+                
+            </div>
+        
+        
+        
+            <div class="card">
+                <div class="section-title">On a scale of 1 to 100, how well did you sleep? </div>
+                <span id="sleepQualityValue">85</span>
+                <input type="range" min="0" max="100" value="85" oninput="updateValue('sleepQualityValue', this.value)">
+            </div>
+            
+            <div class="card">
+                <div class="section-title"> Wake up feeling:</div>
+                <select>
+                    <option>Refreshed</option>
+                    <option>Tired</option>
+                    <option>Neutral</option>
+                </select>
+            </div>
+
+
+            <div class="card">
+                <div class="section-title">Night Disruptions: </divclass></div>
+                <span id="NightDisruptionsValue">1</span>
+                <input type="range" min="0" max="10" value="1" oninput="updateValue('NightDisruptionsValue',this.value)">
+            </div>
+            
+            
+               
+            
+            
+        
+
+            
+
+        </section>
+
+    <script src="js/script.js"></script>
+    <a href="index.html"><button type="submit" class="okay-btn">Save</button></a>
+</body>

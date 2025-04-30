@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Mood Tracker</title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="header">
+                <h1>Holistic Wellness</h1>
+                <div class="profile">
+                    <a href="#to do">Maria Rossi</a>
+                    <img src="images/profilepic.png">
+                </div>
+            </div>
+
+            <section class="card">
+                <h1>Track today's mood!</h1> 
+            </section>
+
+            <div class="card">
+                <div class="section-title">How are you feeling today?</div>
+                <select >
+                    <option>Excited</option>
+                    <option>Happy</option>
+                    <option>Neutral</option>
+                    <option>Stressed</option>
+                    <option>Sad</option>
+                    <option>Overwhelmed</option>
+                    <option>Angry</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <div class="section-title">On a scale of 1 to 10, how stressed are you feeling right now?</div>
+                <span id="StressLevelValue">4</span>
+                <input type="range" min="0" max="10" value="4">
+            </div>
+
+            <div class="card">
+                <div class="section-title">How much energy do you have today? (1 = exhausted, 10 = full of energy)</div>
+                <span id="StressLevelValue">6</span>
+                <input type="range" min="0" max="10" value="6">
+            </div>
+
+            <div class="card">
+                <div class="section-title">Do you feel in control of your emotions today?</div>
+                <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                
+            </div>
+        </div>
+
+    </div>
+    <a href="index.html"> <button class="okay-btn">Save</button></a>
+</body>
+</html>

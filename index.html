@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Outfit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">  <!-- Link to external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Holistic Wellness</h1>
+            <div class="profile">
+                <a href="/holistic/newuser.html">Maria Rossi</a>
+                <img src="images/profilepic.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Hello Maria!</h2>
+            <p class="progress-text">80% complete</p>
+            <div class="progress-bar"><div></div></div>
+            <p class="date-text">Date: <span id="current-date"></span></p>
+        </div>
+
+        <div class="card-container">
+            <a href="/sleep.html" class="card">
+                <div class="section">
+                    <i class="fas fa-bed icon" aria-label="Sleep"></i>
+                    <div class="section-title">Sleep</div>
+                    
+                </div>
+            </a>
+        
+            <a href="/activity.html" class="card">
+                <div class="section">
+                    <i class="fas fa-dumbbell icon" aria-label="Activity"></i>
+                    <div class="section-title">Activity</div>
+                </div>
+            </a>
+        
+            <a href="/mood.html" class="card">
+                <div class="section">
+                    <i class="fas fa-smile icon" aria-label="Mood"></i>
+                    <div class="section-title">Mood</div>
+                </div>
+            </a>
+        
+            <a href="/nutrition.php" class="card">
+                <div class="section">
+                    <i class="fas fa-utensils icon" aria-label="Nutrition"></i>
+                    <div class="section-title">Nutrition</div>
+                </div>
+            </a>
+        
+            
+            <a href="/music.html" class="card">
+                <div class="section">
+                    <i class="fas fa-music icon" aria-label="Music"></i>
+                    <div class="section-title">Music</div>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dateElement = document.getElementById("current-date");
+            const today = new Date();
+            const formattedDate = today.getDate().toString().padStart(2, '0') + "/" + (today.getMonth() + 1).toString().padStart(2, '0') + "/" + today.getFullYear();
+            dateElement.textContent = formattedDate;
+        });
+    </script>
+
+    
+</body>
+</html>
