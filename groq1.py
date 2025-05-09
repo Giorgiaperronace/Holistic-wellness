@@ -6,12 +6,13 @@ from langchain_groq import ChatGroq
 app = Flask(__name__)
 
 # Caricamento sicuro della API Key
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = "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"                     
+
 if not GROQ_API_KEY:
     raise ValueError("Errore: GROQ_API_KEY non trovata! Impostala nelle variabili d'ambiente.")
 
 # Inizializzazione del modello LLM
-llm = ChatGroq(model_name="llama3-8b-8192", temperature=0)
+llm = ChatGroq(model_name="llama3-8b-8192", temperature=0 , api_key=GROQ_API_KEY)
 
 @app.route("/genera_dieta", methods=["GET"])
 def genera_dieta():

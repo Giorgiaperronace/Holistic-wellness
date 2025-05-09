@@ -38,49 +38,9 @@ if ($responseData !== null) {
 }
 
 ?>
-       
+      
+  
 
-
-        <!-- Form Section -->
-        <div class="form-section">
-            <h2>Track Your Nutrition</h2>
-            <form action="#" method="post">
-                <!-- Food Intake Section -->
-                <div class="form-group">
-                    <label for="breakfast">Breakfast:</label>
-                    <input type="text" id="breakfast" name="breakfast" placeholder="What did you eat for breakfast?">
-                </div>
-
-                <div class="form-group">
-                    <label for="lunch">Lunch:</label>
-                    <input type="text" id="lunch" name="lunch" placeholder="What did you eat for lunch?">
-                </div>
-
-                <div class="form-group">
-                    <label for="dinner">Dinner:</label>
-                    <input type="text" id="dinner" name="dinner" placeholder="What did you eat for dinner?">
-                </div>
-
-                <div class="form-group">
-                    <label for="snacks">Snacks:</label>
-                    <input type="text" id="snacks" name="snacks" placeholder="Any snacks today?">
-                </div>
-
-                <!-- Hydration Section -->
-                <div class="form-group">
-                    <label for="water">Water Intake (in liters):</label>
-                    <input type="number" id="water" name="water" step="0.1" placeholder="How much water did you drink today?">
-                </div>
-
-
-                <div class="form-group">
-                    <label for="notes">Additional Notes:</label>
-                    <textarea id="notes" name="notes" rows="4" placeholder="Any specific feelings or emotions related to your food intake?"></textarea>
-                </div>
-            </form>
-        </div>
-        
-    </div>
     <a href="index.html"><button type="submit" class="okay-btn">Save</button></a>
 </body>
 </html>

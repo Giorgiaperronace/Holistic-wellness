@@ -6,8 +6,33 @@
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Outfit&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles.css">  <!-- Link to external CSS -->
+    <link rel="stylesheet" href="static/styles.css">  <!-- Link to external CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dateElement = document.getElementById("current-date");
+            const today = new Date();
+            const formattedDate = today.getDate().toString().padStart(2, '0') + "/" + (today.getMonth() + 1).toString().padStart(2, '0') + "/" + today.getFullYear();
+            dateElement.textContent = formattedDate;
+        });
+    
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById("nutritionDropdown");
+            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+        }
+        
+        window.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("nutritionDropdown");
+            const button = document.querySelector(".dropdown-button");
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+            dropdown.style.display = "none";
+            }
+        });
+
+    </script>
+
 </head>
 <body>
     <div class="container">
@@ -28,40 +53,33 @@
 
         <div class="card-container">
             <a href="/sleep.html" class="card">
-                <div class="section">
-                    <i class="fas fa-bed icon" aria-label="Sleep"></i>
-                    <div class="section-title">Sleep</div>
-                    
-                </div>
+                <div class="section">Sleep</div>
             </a>
         
             <a href="/activity.html" class="card">
-                <div class="section">
-                    <i class="fas fa-dumbbell icon" aria-label="Activity"></i>
-                    <div class="section-title">Activity</div>
+                <div class="section">Activity
                 </div>
             </a>
         
             <a href="/mood.html" class="card">
-                <div class="section">
-                    <i class="fas fa-smile icon" aria-label="Mood"></i>
-                    <div class="section-title">Mood</div>
-                </div>
-            </a>
-        
-            <a href="/nutrition.php" class="card">
-                <div class="section">
-                    <i class="fas fa-utensils icon" aria-label="Nutrition"></i>
-                    <div class="section-title">Nutrition</div>
+                <div class="section">Mood
                 </div>
             </a>
         
             
-            <a href="/music.html" class="card">
-                <div class="section">
-                    <i class="fas fa-music icon" aria-label="Music"></i>
-                    <div class="section-title">Music</div>
+            <div class="card nutrition-card">
+                <button class="section dropdown-button" onclick="toggleDropdown()"> 
+                 Nutrition</button>
+                <div class="dropdown-content" id="nutritionDropdown">
+                  <a href="tracknutrition.html">Track Your Nutrition</a>
+                  <a href="/nutrition.php">Your Personalized Diet</a>
                 </div>
+              </div>
+        
+            
+            
+            <a href="/music.html" class="card">
+                <div class="section">Music</div>
             </a>
         </div>
         
@@ -69,15 +87,6 @@
 
 
     
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const dateElement = document.getElementById("current-date");
-            const today = new Date();
-            const formattedDate = today.getDate().toString().padStart(2, '0') + "/" + (today.getMonth() + 1).toString().padStart(2, '0') + "/" + today.getFullYear();
-            dateElement.textContent = formattedDate;
-        });
-    </script>
 
     
 </body>

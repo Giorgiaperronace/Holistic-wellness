@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Outfit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">  <!-- Link to external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Holistic Wellness</h1>
+            <div class="profile">
+                <a href="/holistic/newuser.html">Maria Rossi</a>
+                <img src="images/profilepic.png">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Track your nutrition</h2>
+        </div>
+
+        <body>
+            <div class="card">
+              <h3>Add a food item:</h3>
+              <div class="card-container">
+                <input type="text" id="foodName" placeholder="food name" />
+                <input type="number" id="quantity" value="100" />
+                <select id="unit">
+                  <option value="grams">grams</option>
+                  <option value="lbs">lbs</option>
+                  <option value="ml">ml</option>
+                </select>
+                <button class="button" onclick="addFood()">ADD</button>
+              </div>
+          
+              <div>
+                <h4>Today's food list</h4>
+                <ul id="foodList"></ul>
+              </div>
+          
+              <div>
+                <label for="satisfaction">Satisfaction (1–10):</label>
+                <input type="number" id="satisfaction" min="1" max="10" />
+              </div>
+          
+              <button class="button" onclick="saveData()">SAVE</button>
+          
+              <div class="card-container">
+                <h4>HISTORY</h4>
+                <div id="history"></div>
+              </div>
+            </div>
+          
+            <script src="script.js"></script>
+
+            <a href="index.html"><button type="submit" class="okay-btn">Save</button></a>
+          </body>
+          </html>
+
+          
