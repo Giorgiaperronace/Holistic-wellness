@@ -6,7 +6,7 @@ from langchain_groq import ChatGroq
 app = Flask(__name__)
 
 # Caricamento sicuro della API Key
-GROQ_API_KEY = "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"                     
+GROQ_API_KEY = "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"                     
 
 if not GROQ_API_KEY:
     raise ValueError("Errore: GROQ_API_KEY non trovata! Impostala nelle variabili d'ambiente.")
